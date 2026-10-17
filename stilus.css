@@ -96,7 +96,7 @@ button.general_button:hover {
 
 div.product_card {
     background-color: rgb(64,64,128);
-    border: 1px solid (8,8,32);
+    border: 1px solid rgb(8,8,32);
     border-radius: 8px;
     text-align: center;
     padding: 2px;

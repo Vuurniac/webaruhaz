@@ -1,0 +1,178 @@
+/*Tags*/
+body {
+    background-color: rgb(8,8,32);
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+    main {
+    background-color: rgb(8,8,64);
+    display: grid;
+    max-width: 95%;
+    margin: auto;
+    gap: 4px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:    "h h"
+                            "n n"
+                            "ar as"
+                            "f f";
+    }
+
+        header {
+            text-align: center;
+            grid-area: h;
+            margin: 4px;
+        }
+
+        nav {
+            background-color: rgb(64,64,128);
+            grid-area: n;
+            margin: 4px;
+        }
+
+            nav ul {
+                list-style: none;
+                display: grid;
+                grid-template-columns: 128px 128px 128px;
+            }
+
+            nav li {
+                background-color: rgb(8,8,32);
+                border: 1px solid aliceblue;
+                border-radius: 8px;
+                text-align: center;
+                margin: 8px;
+                padding: 4px;
+            }
+
+            nav li:hover {
+                filter: invert();
+            }
+
+            nav a {
+                color: aliceblue;
+                text-decoration: none;
+            }
+
+        article {
+            grid-area: ar;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 8px;
+            padding: 8px;
+        }
+
+        h2 {
+            font-size: medium;
+        }
+
+        aside {
+            grid-area: as;
+            grid-template-columns: 1fr;
+            background-color: rgb(64,64,128);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        footer {
+            grid-area: f;
+            background-color: rgb(64,64,128);
+            margin: 8px;
+            text-align: center;
+        }
+
+/*Classes*/
+button.general_button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(16,16,64);
+    color: aliceblue;
+    border-radius: 8px;
+    border: 1px solid aliceblue;
+}
+
+button.general_button:hover {
+    filter: invert();
+}
+
+div.product_card {
+    background-color: rgb(64,64,128);
+    border: 1px solid (8,8,32);
+    border-radius: 8px;
+    text-align: center;
+    padding: 2px;
+} 
+
+    div.product_card_footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        div.product_card_footer p {
+        text-align: right;
+        background-color: rgb(64,64,128);
+        }
+
+    .car_image {
+        max-width: 100%;
+        border: 1px solid aliceblue;
+        border-radius: 8px;
+    }
+
+div.cart_list {
+    border-bottom: 1px solid aliceblue;
+}
+
+    div.cart_item {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .cart_item_car_name {
+        text-align: left;
+    }
+
+    .car_price {
+        text-align: right;
+    }
+
+div.cart_total {
+    text-align: center;
+}
+
+
+/*Responsivity*/
+@media screen and (max-width: 600px) {
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:    "h"
+                            "n"
+                            "as"
+                            "ar"
+                            "f";
+    }
+
+    nav ul {
+        grid-template-columns: 128px 128px;
+    }
+
+        nav ul li {
+            margin-top: 16px;
+        }
+
+    article {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+
+    nav ul {
+        grid-template-columns: 128px;
+    }
+
+    article {
+        grid-template-columns: 1fr;
+    }
+}
